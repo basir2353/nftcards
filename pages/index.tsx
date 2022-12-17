@@ -9,9 +9,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Box display="flex" flexWrap="wrap" justifyContent="space-around">
-        {cardData.map((item) => {
+        {cardData.map((item, index) => {
           return (
             <Cards
+              key={index}
               id={item.id}
               setBid={item.setBid}
               price={item.price}
@@ -23,4 +24,3 @@ export default function Home() {
     </div>
   );
 }
-
